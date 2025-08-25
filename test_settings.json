@@ -1,0 +1,10 @@
+{
+  "work_time": 15,
+  "break_time": 5,
+  "theme": "focus",
+  "sounds": {
+    "start": true,
+    "end": true,
+    "tick": false
+  }
+}
