@@ -7,7 +7,64 @@
 </head>
 <body>
     <h1>ポモドーロタイマー</h1>
+    
+    <!-- Settings Button -->
+    <button id="settings-btn" class="settings-btn">⚙️ 設定</button>
+    
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel hidden">
+        <h3>設定</h3>
+        
+        <!-- Work Time Settings -->
+        <div class="setting-group">
+            <label>作業時間:</label>
+            <select id="work-time">
+                <option value="15">15分</option>
+                <option value="25" selected>25分</option>
+                <option value="35">35分</option>
+                <option value="45">45分</option>
+            </select>
+        </div>
+        
+        <!-- Break Time Settings -->
+        <div class="setting-group">
+            <label>休憩時間:</label>
+            <select id="break-time">
+                <option value="5" selected>5分</option>
+                <option value="10">10分</option>
+                <option value="15">15分</option>
+            </select>
+        </div>
+        
+        <!-- Theme Settings -->
+        <div class="setting-group">
+            <label>テーマ:</label>
+            <select id="theme">
+                <option value="default" selected>デフォルト</option>
+                <option value="dark">ダーク</option>
+                <option value="light">ライト</option>
+                <option value="focus">フォーカス</option>
+            </select>
+        </div>
+        
+        <!-- Sound Settings -->
+        <div class="setting-group">
+            <label>サウンド:</label>
+            <div class="sound-controls">
+                <label><input type="checkbox" id="start-sound" checked> 開始音</label>
+                <label><input type="checkbox" id="end-sound" checked> 終了音</label>
+                <label><input type="checkbox" id="tick-sound"> Tick音</label>
+            </div>
+        </div>
+        
+        <button id="close-settings">閉じる</button>
+    </div>
+    
+    <!-- Timer Display -->
     <div id="timer">25:00</div>
+    <div id="session-type">作業時間</div>
+    
+    <!-- Control Buttons -->
     <button id="start">開始</button>
     <button id="reset">リセット</button>
     <script src="/static/js/timer.js"></script>

@@ -1,3 +1,4 @@
+/* Default Theme */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background: #7b6fdc;
@@ -5,11 +6,39 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Dark Theme */
+body.theme-dark {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Light Theme */
+body.theme-light {
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Focus Theme */
+body.theme-focus {
+    background: #2c2c2c;
+    color: #ffffff;
+}
+
 #timer {
     font-size: 3em;
     margin: 2em 0;
+    font-weight: bold;
 }
+
+#session-type {
+    font-size: 1.2em;
+    margin: 1em 0;
+    opacity: 0.8;
+}
+
 button {
     font-size: 1.2em;
     margin: 0.5em;
@@ -19,9 +48,106 @@ button {
     background: #7b6fdc;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+button:hover {
+    opacity: 0.9;
+}
+
 button#reset {
     background: #fff;
     color: #7b6fdc;
     border: 2px solid #7b6fdc;
+}
+
+/* Settings Button */
+.settings-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Settings Panel */
+.settings-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 300px;
+}
+
+.settings-panel.hidden {
+    display: none;
+}
+
+.settings-panel h3 {
+    margin-top: 0;
+    color: #7b6fdc;
+}
+
+.setting-group {
+    margin: 1em 0;
+    text-align: left;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.setting-group select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+
+.sound-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.sound-controls label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.sound-controls input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+#close-settings {
+    margin-top: 1em;
+    width: 100%;
+}
+
+/* Theme specific overrides for settings panel */
+body.theme-dark .settings-panel {
+    background: rgba(40, 40, 40, 0.95);
+    color: #e0e0e0;
+}
+
+body.theme-light .settings-panel {
+    background: rgba(255, 255, 255, 0.98);
+    color: #333;
+}
+
+body.theme-focus .settings-panel {
+    background: rgba(60, 60, 60, 0.95);
+    color: #ffffff;
 }
