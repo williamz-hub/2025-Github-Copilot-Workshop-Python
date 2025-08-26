@@ -6,10 +6,23 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <h1>ポモドーロタイマー</h1>
-    <div id="timer">25:00</div>
-    <button id="start">開始</button>
-    <button id="reset">リセット</button>
+    <canvas id="background-canvas"></canvas>
+    <div class="container">
+        <h1>ポモドーロタイマー</h1>
+        <div class="timer-container">
+            <div class="progress-ring">
+                <svg class="progress-ring-svg" width="300" height="300">
+                    <circle class="progress-ring-circle-bg" cx="150" cy="150" r="120" />
+                    <circle class="progress-ring-circle" cx="150" cy="150" r="120" />
+                </svg>
+                <div id="timer">25:00</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start">開始</button>
+            <button id="reset">リセット</button>
+        </div>
+    </div>
     <script src="/static/js/timer.js"></script>
 </body>
 </html>
