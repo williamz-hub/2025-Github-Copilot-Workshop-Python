@@ -1,4 +1,4 @@
-let timer = 1500;
+let timer = 1500; // 25分 = 1500秒
 let initialTimer = 1500;
 let interval = null;
 const timerDisplay = document.getElementById('timer');
