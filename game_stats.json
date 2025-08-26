@@ -1,0 +1,21 @@
+{
+  "level": 2,
+  "experience": 500,
+  "total_completed": 5,
+  "current_streak": 1,
+  "longest_streak": 1,
+  "last_completion_date": "2025-08-26",
+  "badges": [
+    "first_completion",
+    "five_completions"
+  ],
+  "completion_history": [
+    {
+      "date": "2025-08-26",
+      "count": 5
+    }
+  ],
+  "daily_completions": {
+    "2025-08-26": 5
+  }
+}
